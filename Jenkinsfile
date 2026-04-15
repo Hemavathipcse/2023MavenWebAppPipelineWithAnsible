@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy') {
             steps {
                sh 'mvn clean package'  
-               sh 'ansible-playbook 2023MavenWebAppPipelineWithAnsible/ansible/playbook.yml -i 2023MavenWebAppPipelineWithAnsible/ansible/hosts.ini'
+               sh 'ansible-playbook playbook.yml -i hosts.ini'
             }
         }
 
